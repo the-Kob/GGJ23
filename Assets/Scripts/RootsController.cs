@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using UnityEngine.Animations.Rigging;
 
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(StarterAssets.ThirdPersonController))]
@@ -36,6 +37,10 @@ public class RootsController : MonoBehaviour
                 //GetComponent<Rigidbody>().isKinematic = true;
                 _currentRoots = Instantiate(rootsPrefab, this.transform);
 
+                GameObject.Find("ArmAim").GetComponent<MultiAimConstraint>().weight = 1;
+                GameObject.Find("PlayerFollowCamera").GetComponent<Cinemachine.CinemachineVirtualCamera>().m_Lens.FieldOfView = 35;
+
+
                 RootStart.Invoke();
             } else if (_rooted) {
                 _rooted = false;
@@ -44,6 +49,9 @@ public class RootsController : MonoBehaviour
                 //GetComponent<Rigidbody>().isKinematic = true;
                 Destroy(_currentRoots);
                 _currentRoots = null;
+
+                GameObject.Find("ArmAim").GetComponent<MultiAimConstraint>().weight = 0.5f;
+                GameObject.Find("PlayerFollowCamera").GetComponent<Cinemachine.CinemachineVirtualCamera>().m_Lens.FieldOfView = 40;
 
 
                 RootEnd.Invoke();

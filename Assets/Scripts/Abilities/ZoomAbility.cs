@@ -29,7 +29,7 @@ public class ZoomAbility : Ability
 
         } while(_action.IsPressed());
 
-        GameObject.Find("PlayerFollowCamera").GetComponent<Cinemachine.CinemachineVirtualCamera>().m_Lens.FieldOfView = 40;
+        GameObject.Find("PlayerFollowCamera").GetComponent<Cinemachine.CinemachineVirtualCamera>().m_Lens.FieldOfView = 35;
 
         
     }
