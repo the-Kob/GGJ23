@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour
     private Coroutine followCoroutine;
 
     public Transform target;
-    public float updateSpeed = 0.1f;
+    public float updateRate = 0.1f;
 
     private void Awake()
     {
@@ -31,7 +31,7 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator FollowTarget()
     {
-        WaitForSeconds wait = new WaitForSeconds(updateSpeed);
+        WaitForSeconds wait = new WaitForSeconds(updateRate);
 
         while(enabled)
         {
