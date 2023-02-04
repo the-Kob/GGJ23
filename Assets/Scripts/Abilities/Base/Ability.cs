@@ -10,7 +10,6 @@ public class Ability : ScriptableObject
     public float cooldownTime;
     public bool rootedAbility;
 
-    public virtual void Activate(GameObject parent) {}
     public virtual void Activate(GameObject parent, InputAction action) {}
 
 }
