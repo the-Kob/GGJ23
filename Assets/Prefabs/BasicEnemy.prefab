@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  updateSpeed: 0.1
+  updateRate: 0.1
 --- !u!114 &4282028578973815760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,4 +198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 763025566931318675}
   agent: {fileID: 763025566931318674}
-  health: 10
+  enemyScriptableObject: {fileID: 11400000, guid: 0699b3845f5f7b84eab5d5a68a8ae842,
+    type: 2}
+  health: 100
