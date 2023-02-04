@@ -45,6 +45,7 @@ public class RootsController : MonoBehaviour
                 Destroy(_currentRoots);
                 _currentRoots = null;
 
+
                 RootEnd.Invoke();
             }
 
