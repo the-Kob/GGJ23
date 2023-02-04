@@ -19501,7 +19501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5450866953951887493}
   m_Layer: 0
-  m_Name: vfx_AOE2
+  m_Name: vfx_Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
