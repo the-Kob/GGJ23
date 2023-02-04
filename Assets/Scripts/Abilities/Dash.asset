@@ -16,6 +16,6 @@ MonoBehaviour:
   cooldownTime: 5
   rootedAbility: 0
   duration: 0.1
-  movSpeedMult: 60
+  movSpeedMult: 30
   jumpBoostMult: 1
   gravityMult: 1

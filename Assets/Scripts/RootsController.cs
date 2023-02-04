@@ -39,7 +39,7 @@ public class RootsController : MonoBehaviour
                 RootStart.Invoke();
             } else if (_rooted) {
                 _rooted = false;
-                _controller.MoveSpeed = 2;
+                _controller.MoveSpeed = 5;
                 _controller.SprintSpeed = 5.335f;
                 //GetComponent<Rigidbody>().isKinematic = true;
                 Destroy(_currentRoots);

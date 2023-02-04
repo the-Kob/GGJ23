@@ -8,9 +8,14 @@ public class AR_Ability : Ability
 {
     public GameObject bullet;
     public float fireRate;
+    public int maxBullets = -1;
     public float bulletSpeed;
     public float bulletDamage;
-    public string sourceTransformName = "Skeleton/Hips/Spine/Chest/UpperChest/Right_Shoulder/Right_UpperArm/Right_LowerArm/Right_Hand";
+    public string sourceTransformName = "mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand";
+
+    // "Skeleton/Hips/Spine/Chest/UpperChest/Right_Shoulder/Right_UpperArm/Right_LowerArm/Right_Hand"
+
+    // "mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand"
 
     private PlayerInput _playerInput;
     private InputAction _action;
@@ -31,6 +36,7 @@ public class AR_Ability : Ability
     IEnumerator Fire() {
         GameObject bulletBuffer;
         Vector3 target;
+        int bulletCount = 0;
         do {
             // aim from camera
 
@@ -39,7 +45,7 @@ public class AR_Ability : Ability
                 Debug.DrawRay(cameraTransform.position, cameraTransform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
                 target = hit.point;
             } else {
-                target = cameraTransform.position + cameraTransform.TransformDirection(Vector3.forward);
+                target = sourceTransform.position + sourceTransform.TransformDirection(Vector3.forward)*1000;
             }
             
             // fire from source
@@ -49,9 +55,13 @@ public class AR_Ability : Ability
             bulletBuffer.GetComponent<Bullet>().SetSpeed(bulletSpeed);
             bulletBuffer.transform.LookAt(hit.point);
 
+            bulletCount++;
+
             //Destroy(bulletBuffer, 5f); //max mifespan
 
-            Debug.Log(Time.time);
+            if(maxBullets != -1 && bulletCount >= maxBullets) {
+                break;
+            }
 
 
             yield return new WaitForSecondsRealtime(fireRate);

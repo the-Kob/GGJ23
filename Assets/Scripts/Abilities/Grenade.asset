@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96c8689c3ca20164d9f3be1cff823d7d, type: 3}
-  m_Name: PrimaryFire
+  m_Name: Grenade
   m_EditorClassIdentifier: 
-  name: Primary Fire
-  cooldownTime: 0
-  rootedAbility: 1
-  bullet: {fileID: 4390799131772530201, guid: ab8f27631dfbf824f9b0159ee7f3fee9, type: 3}
-  fireRate: 0.2
-  maxBullets: -1
-  bulletSpeed: 50
-  bulletDamage: 1
+  name: Grenade
+  cooldownTime: 5
+  rootedAbility: 0
+  bullet: {fileID: 4390799131772530201, guid: 351ebeb038aefe1419d1af4ede184255, type: 3}
+  fireRate: 0
+  maxBullets: 1
+  bulletSpeed: 20
+  bulletDamage: 3
   sourceTransformName: mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand

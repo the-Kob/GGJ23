@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class Bullet : MonoBehaviour
 {
+    public GameObject hitVFX;
+    public LayerMask hitMask;
     private float speed;
     private float damage;
 
@@ -21,11 +23,17 @@ public class Bullet : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
+        if(hitMask != (hitMask | (1 << other.gameObject.layer)))
+            return;
+
+
         if(other.gameObject.GetComponent<HealthHandler>() != null) {
             other.gameObject.GetComponent<HealthHandler>().TakeDamage(damage);
         }
 
-        //TODO: spawn hit vfx
+        if(hitVFX != null) {
+            Instantiate(hitVFX, transform.position, Quaternion.identity);
+        }
 
         Destroy(gameObject);
     }

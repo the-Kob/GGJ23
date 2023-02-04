@@ -9,7 +9,7 @@ public class AbilitySlot : MonoBehaviour
     public KeyCode key;
     public Ability currentAbility;
 
-    enum AbilityState {
+    public enum AbilityState {
         READY,
         ACTIVE,
         ON_COOLDOWN
@@ -65,7 +65,7 @@ public class AbilitySlot : MonoBehaviour
             case AbilityState.READY:
                 if(((!currentAbility.rootedAbility && !playerRooted) || (currentAbility.rootedAbility && playerRooted)) && abilityAction.WasPressedThisFrame()) {
                     Debug.Log("Ability used");
-                    currentAbility.Activate(gameObject, abilityAction);
+                    currentAbility.Activate(RootsController.Instance.gameObject, abilityAction);
                     remainingCooldown = currentAbility.cooldownTime;
                     lastTime = Time.time;
                     currentAbilityState = AbilityState.ON_COOLDOWN;
@@ -86,6 +86,25 @@ public class AbilitySlot : MonoBehaviour
         }
     }
 
+    public float GetRemainingCooldown() {
+        return remainingCooldown;
+    }
+
+    public AbilityState GetAbilityState() {
+        return currentAbilityState;
+    }
+
+    public float GetTotalCooldown() {
+        return currentAbility.cooldownTime;
+    }
+
+    public float GetCooldownPercentage() {
+        if(playerRooted)
+            return (Time.time-lastTime+currentAbility.cooldownTime-remainingCooldown)/currentAbility.cooldownTime;
+        
+        return 1-remainingCooldown/currentAbility.cooldownTime;
+    }
+
     void OnPlayerRootStart() {
         playerRooted = true;
         lastTime = Time.time;
@@ -93,6 +112,6 @@ public class AbilitySlot : MonoBehaviour
 
     void OnPlayerRootEnd() {
         playerRooted = false;
-        remainingCooldown = currentAbility.cooldownTime - (Time.time - lastTime);
+        remainingCooldown = remainingCooldown - (Time.time - lastTime);
     }
 }

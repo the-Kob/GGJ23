@@ -25,7 +25,7 @@ public class DashAbility : Ability {
 
         yield return new WaitForSeconds(duration);
 
-        _controller.MoveSpeed = 2;
+        _controller.MoveSpeed = 5;
         _controller.JumpHeight = 1.2f;
         _controller.Gravity = -15;
 
