@@ -93,6 +93,8 @@ namespace StarterAssets
 
         // animation IDs
         private int _animIDSpeed;
+        private int _animVelX;
+        private int _animVelY;
         private int _animIDGrounded;
         private int _animIDJump;
         private int _animIDFreeFall;
@@ -169,6 +171,8 @@ namespace StarterAssets
         private void AssignAnimationIDs()
         {
             _animIDSpeed = Animator.StringToHash("Speed");
+            _animVelX = Animator.StringToHash("VelX");
+            _animVelY = Animator.StringToHash("VelY");
             _animIDGrounded = Animator.StringToHash("Grounded");
             _animIDJump = Animator.StringToHash("Jump");
             _animIDFreeFall = Animator.StringToHash("FreeFall");
@@ -283,6 +287,7 @@ namespace StarterAssets
             }
 
             Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
+            Debug.Log(targetDirection);
 
             // move the player
             _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
@@ -292,6 +297,8 @@ namespace StarterAssets
             if (_hasAnimator)
             {
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
+                _animator.SetFloat(_animVelX, inputDirection.z*_speed);
+                _animator.SetFloat(_animVelY, inputDirection.x*_speed);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
         }
