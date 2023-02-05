@@ -9,6 +9,7 @@ public class Ability : ScriptableObject
     public new string name;
     public float cooldownTime;
     public bool rootedAbility;
+    public Sprite abilityUI;
 
     public virtual void Activate(GameObject parent, InputAction action) {}
 

@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Grenade
   cooldownTime: 1
   rootedAbility: 0
+  abilityUI: {fileID: 21300000, guid: ec57d8490d88d924d924d4e21fa5c913, type: 3}
   bullet: {fileID: 4390799131772530201, guid: 351ebeb038aefe1419d1af4ede184255, type: 3}
   muzzleVFX: {fileID: 0}
   fireRate: 0

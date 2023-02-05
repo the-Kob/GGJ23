@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Sprint
   cooldownTime: 5
   rootedAbility: 0
+  abilityUI: {fileID: 21300000, guid: 27b57dac58ba6e54d8cd8db76cf6e677, type: 3}
   duration: 2
   movSpeedMult: 4
   jumpBoostMult: 1
