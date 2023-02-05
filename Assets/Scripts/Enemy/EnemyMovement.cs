@@ -49,6 +49,11 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        animator.SetBool(isWalking, agent.velocity.magnitude > 0.01f);
+    }
+
 
     IEnumerator FollowTarget()
     {
