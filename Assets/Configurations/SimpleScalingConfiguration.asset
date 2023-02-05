@@ -14,11 +14,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0.009791737
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.49263263
+      value: 0.0048237294
+      inSlope: 0.30164206
+      outSlope: 1.0518839
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.03014478
+    - serializedVersion: 3
+      time: 10.001749
+      value: 10.00731
+      inSlope: 1.0518839
+      outSlope: 0
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   damageCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1.0454518
+      value: 0.028879955
+      inSlope: 0.027624378
+      outSlope: 3.0218546
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.03009154
+    - serializedVersion: 3
+      time: 10
+      value: 10
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speedCurve:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
@@ -32,7 +92,43 @@ MonoBehaviour:
     m_RotationOrder: 4
   spawnCountCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.016879678
+      outSlope: -0.016879678
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.9831203
+      inSlope: -0.016879678
+      outSlope: 5.495371
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.050809596
+    - serializedVersion: 3
+      time: 5.3323026
+      value: 15.098646
+      inSlope: 1.9259813
+      outSlope: 1.9259813
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 10
+      value: 20
+      inSlope: 0.1327845
+      outSlope: 2.1129866
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.06234879
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

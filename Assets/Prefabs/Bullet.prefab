@@ -115,7 +115,7 @@ MonoBehaviour:
   hitVFX: {fileID: 246904745131225633, guid: a1fc564bcbce4c34285c0321fedc1be8, type: 3}
   hitMask:
     serializedVersion: 2
-    m_Bits: 567
+    m_Bits: 1591
 --- !u!54 &680920061141120055
 Rigidbody:
   m_ObjectHideFlags: 0

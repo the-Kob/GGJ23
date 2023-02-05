@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,28 @@ public class EnemyMovement : MonoBehaviour
 
         linkMover.OnLinkEnd += HandleLinkEnd;
         linkMover.OnLinkStart += HandleLinkStart;
+    }
+
+    // For now we only care about objectives
+    public void ChangeTarget(Transform player, List<Transform> objectives, Boolean toPlayer)
+    {
+        if (toPlayer)
+        {
+            target = player;
+            return;
+        }
+
+        float distance = float.MaxValue;
+        Transform chosen = target;
+
+        foreach (Transform objective in objectives) {
+            if (Vector3.Distance(transform.position, objective.position) < distance)
+            {
+                chosen = objective;
+            }
+        }
+        
+        target = chosen;
     }
 
     private void HandleLinkStart()

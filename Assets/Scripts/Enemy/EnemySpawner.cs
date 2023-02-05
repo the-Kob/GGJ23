@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     private Dictionary<int, ObjectPool> enemyObjectPools = new Dictionary<int, ObjectPool>();
     private NavMeshTriangulation triangulation;
 
-    public Transform player;
+    public GameManager gameManager;
     public int numberOfEnemiesToSpawn = 5;
     public float spawnDelay = 1f;
     public List<EnemyScriptableObject> enemies = new List<EnemyScriptableObject>();
@@ -126,7 +126,7 @@ public class EnemySpawner : MonoBehaviour
             if (NavMesh.SamplePosition(spawnPosition, out hit, 2f, -1))
             {
                 enemy.agent.Warp(hit.position);
-                enemy.movement.target = player;
+                enemy.movement.ChangeTarget(gameManager.player, gameManager.GetObjectiveTransforms(), false);
                 enemy.agent.enabled = true;
                 enemy.movement.StartChasing();
                 enemy.OnDie += HandleEnemyDeath;
