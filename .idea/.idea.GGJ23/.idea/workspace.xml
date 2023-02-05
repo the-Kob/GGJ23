@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c03d14ba-b6ac-4a06-a3e6-509f46546dd9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ23/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ23/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ability Cooldown Indicator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ability Cooldown Indicator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test_paulo/test_paulo-ina.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/test_paulo/test_paulo-ina.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Effects/Abilities/AR_muzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Effects/Abilities/AR_muzzle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,12 +16,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TitleScreen/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/ProjectileMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TitleScreen/ButtonsManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Base/Ability.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/RootedOverlay.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TitleScreen/SceneLoader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TitleScreen/ButtonsManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2LJtCFKb52sZr1hgbVhWWU3wPi0" />
@@ -65,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675600891017</updated>
-      <workItem from="1675600897907" duration="1007000" />
+      <workItem from="1675600897907" duration="1907000" />
     </task>
     <servers />
   </component>
@@ -75,6 +80,15 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
