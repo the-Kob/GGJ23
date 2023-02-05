@@ -6,15 +6,36 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyMovement : MonoBehaviour
 {
+    [SerializeField]
+    private Animator animator;
     private NavMeshAgent agent;
     private Coroutine followCoroutine;
+    private AgentLinkMover linkMover;
 
     public Transform target;
     public float updateRate = 0.1f;
 
+    private const string isWalking = "isWalking";
+    private const string jump = "jump";
+    private const string landed = "landed";
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        linkMover = GetComponent<AgentLinkMover>();
+
+        linkMover.OnLinkEnd += HandleLinkEnd;
+        linkMover.OnLinkStart += HandleLinkStart;
+    }
+
+    private void HandleLinkStart()
+    {
+        animator.SetTrigger(jump);
+    }
+
+    private void HandleLinkEnd()
+    {
+        animator.SetTrigger(landed);
     }
 
     public void StartChasing()
