@@ -4139,7 +4139,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentAbility
       value: 
-      objectReference: {fileID: 11400000, guid: 66844fcd99a00674eb477aeee34bdaf8,
+      objectReference: {fileID: 11400000, guid: b15095aa68b2e784ba9309d54288266f,
         type: 2}
     - target: {fileID: 65036383145907820, guid: 32d0f9843c3b71541b2b2fba0c1fe74f,
         type: 3}

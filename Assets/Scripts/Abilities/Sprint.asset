@@ -19,3 +19,4 @@ MonoBehaviour:
   movSpeedMult: 4
   jumpBoostMult: 1
   gravityMult: 1
+  vfx: {fileID: 8720431641625269627, guid: df5b42bcabe47dc4595fcac41228d5dd, type: 3}
