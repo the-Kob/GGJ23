@@ -370,12 +370,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 262661829}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &262661831 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544,
-    type: 3}
-  m_PrefabInstance: {fileID: 262661829}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &551006623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544,
@@ -1007,7 +1001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9593c9fcaf1a83648bb25884e60aa3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 262661831}
+  gameManager: {fileID: 0}
   numberOfEnemiesToSpawn: 5
   spawnDelay: 1
   enemies:
