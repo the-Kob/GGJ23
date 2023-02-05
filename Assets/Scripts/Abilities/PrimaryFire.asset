@@ -16,6 +16,8 @@ MonoBehaviour:
   cooldownTime: 0
   rootedAbility: 1
   bullet: {fileID: 4390799131772530201, guid: ab8f27631dfbf824f9b0159ee7f3fee9, type: 3}
+  muzzleVFX: {fileID: 246904745131225633, guid: a030251603d9e4d4290145d5467f09a5,
+    type: 3}
   fireRate: 0.2
   maxBullets: -1
   bulletSpeed: 50

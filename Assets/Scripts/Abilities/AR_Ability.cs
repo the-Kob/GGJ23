@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class AR_Ability : Ability
 {
     public GameObject bullet;
+    public GameObject muzzleVFX;
     public float fireRate;
     public int maxBullets = -1;
     public float bulletSpeed;
@@ -35,6 +36,7 @@ public class AR_Ability : Ability
 
     IEnumerator Fire() {
         GameObject bulletBuffer;
+        GameObject vfxBuffer;
         Vector3 target;
         int bulletCount = 0;
         do {
@@ -49,7 +51,11 @@ public class AR_Ability : Ability
             }
             
             // fire from source
-            //TODO: missing vfx 
+            if(muzzleVFX != null) {
+                vfxBuffer = Instantiate(muzzleVFX, sourceTransform.position, Quaternion.identity);
+                vfxBuffer.transform.LookAt(hit.point);
+                Destroy(vfxBuffer, 2f);
+            }
             bulletBuffer = Instantiate(bullet, sourceTransform.position, Quaternion.identity);
             bulletBuffer.GetComponent<Bullet>().SetDamage(bulletDamage);
             bulletBuffer.GetComponent<Bullet>().SetSpeed(bulletSpeed);
