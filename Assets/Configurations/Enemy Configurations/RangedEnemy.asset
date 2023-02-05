@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e4ef0a0867abd4b9cc7b75afc82d73, type: 3}
+  m_Name: RangedEnemy
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6773568274911468514, guid: 96cece9f76a542741b421cd8b27e6bd2, type: 3}
+  attackConfiguration: {fileID: 11400000, guid: 4f1d4c4edc01d4a4399cd8b2a0c1c888,
+    type: 2}
+  health: 200
+  aiUpdateInterval: 0.1
+  acceleration: 8
+  angularSpeed: 120
+  areaMask: -1
+  avoidancePriority: 50
+  baseOffset: 0.75
+  height: 2
+  obstacleAvoidanceType: 4
+  radius: 0.5
+  speed: 4.5
+  stoppingDistance: 0.5

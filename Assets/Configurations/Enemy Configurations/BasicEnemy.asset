@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60e4ef0a0867abd4b9cc7b75afc82d73, type: 3}
   m_Name: BasicEnemy
   m_EditorClassIdentifier: 
+  prefab: {fileID: 3076293159900649879, guid: e8db5fb4e6636f9468f2a84774380dfb, type: 3}
+  attackConfiguration: {fileID: 11400000, guid: cd4ffea81d1881842a2972b9a6740e1e,
+    type: 2}
   health: 100
   aiUpdateInterval: 0.1
   acceleration: 8
@@ -20,7 +23,7 @@ MonoBehaviour:
   avoidancePriority: 50
   baseOffset: 0.75
   height: 2
-  obstacleAvoidanceType: 0
+  obstacleAvoidanceType: 4
   radius: 0.5
-  speed: 2
+  speed: 3
   stoppingDistance: 0.5

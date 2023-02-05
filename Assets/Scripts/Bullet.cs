@@ -8,13 +8,13 @@ public class Bullet : MonoBehaviour
     public GameObject hitVFX;
     public LayerMask hitMask;
     private float speed;
-    private float damage;
+    private int damage;
 
     public void SetSpeed(float value) {
         speed = value;
     }
 
-    public void SetDamage(float value) {
+    public void SetDamage(int value) {
         damage = value;
     }
 
@@ -26,9 +26,9 @@ public class Bullet : MonoBehaviour
         if(hitMask != (hitMask | (1 << other.gameObject.layer)))
             return;
 
-
-        if(other.gameObject.GetComponent<HealthHandler>() != null) {
-            other.gameObject.GetComponent<HealthHandler>().TakeDamage(damage);
+        
+        if(other.gameObject.GetComponent<Enemy>() != null) {
+            other.gameObject.GetComponent<Enemy>().TakeDamage(damage);
         }
 
         if(hitVFX != null) {

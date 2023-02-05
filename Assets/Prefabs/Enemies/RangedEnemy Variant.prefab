@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8408708830189552245
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 763025566931318382, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 763025566931318382, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 763025566931318382, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 763025566931318382, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 522.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 763025566931318382, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 763025566931318382, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 763025566931318382, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 763025566931318382, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 763025566931318382, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 763025566931318382, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 763025566931318382, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 763025566931318672, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: m_Name
+      value: RangedEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076293159900649879, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: attackRadius
+      value: 
+      objectReference: {fileID: 527145939}
+    - target: {fileID: 3076293159900649879, guid: e8db5fb4e6636f9468f2a84774380dfb,
+        type: 3}
+      propertyPath: enemyScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: c40d619dbfb2f474a9c26ca6e342a6b5,
+        type: 2}
+    m_RemovedComponents:
+    - {fileID: 6065370891489921094, guid: e8db5fb4e6636f9468f2a84774380dfb, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: e8db5fb4e6636f9468f2a84774380dfb, type: 3}
+--- !u!1 &2135964878488449633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7572174523863150612, guid: e8db5fb4e6636f9468f2a84774380dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8408708830189552245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &527145939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135964878488449633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d917ca9234a84a14e8d4746b251505ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  attackDelay: 0.5
+  coll: {fileID: 3291465285935979574}
+  spherecastRadius: 0.1
+  agent: {fileID: 9090361456194024935}
+  bulletPrefab: {fileID: 3020142248414552415, guid: 02ed2743cd4b8464181136ce774882d3,
+    type: 3}
+  bulletSpawnOffset: {x: 0, y: 0.5, z: 0.5}
+  mask:
+    serializedVersion: 2
+    m_Bits: 257
+--- !u!135 &3291465285935979574 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 6421040275096723011, guid: e8db5fb4e6636f9468f2a84774380dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8408708830189552245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &9090361456194024935 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 763025566931318674, guid: e8db5fb4e6636f9468f2a84774380dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8408708830189552245}
+  m_PrefabAsset: {fileID: 0}

@@ -11,7 +11,7 @@ public class AR_Ability : Ability
     public float fireRate;
     public int maxBullets = -1;
     public float bulletSpeed;
-    public float bulletDamage;
+    public int bulletDamage;
     public string sourceTransformName = "mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand";
 
     // "Skeleton/Hips/Spine/Chest/UpperChest/Right_Shoulder/Right_UpperArm/Right_LowerArm/Right_Hand"

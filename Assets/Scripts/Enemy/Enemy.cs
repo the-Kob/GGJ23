@@ -3,16 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : PoolableObject
+public class Enemy : PoolableObject, IDamageable
 {
+    private const string ATTACK_TRIGGER = "Attack";
+    private Coroutine lookCoroutine;
+
     public EnemyMovement movement;
     public NavMeshAgent agent;
-    public EnemyScriptableObject enemyScriptableObject;
-    public int health = 10;
+    public int health = 100;
+    public AttackRadius attackRadius;
+    public Animator animator;
+    public delegate void DeathEvent(Enemy enemy);
+    public DeathEvent OnDie;
 
-    public virtual void OnEnable()
+    private void Awake()
     {
-        SetupAgentFromConfiguration();
+        attackRadius.onAttack += OnAttack;
+    }
+
+    private void OnAttack(IDamageable target)
+    {
+        animator.SetTrigger(ATTACK_TRIGGER);
+
+        if (lookCoroutine != null)
+        {
+            StopCoroutine(lookCoroutine);
+        }
+
+        lookCoroutine = StartCoroutine(LookAt(target.GetTransform()));
+    }
+
+    private IEnumerator LookAt(Transform target)
+    {
+        Quaternion lookRotation = Quaternion.LookRotation(target.position - transform.position);
+        float time = 0;
+
+        while (time < 1)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, time);
+
+            time += Time.deltaTime * 2;
+            yield return null;
+        }
+
+        transform.rotation = lookRotation;
     }
 
     public override void OnDisable()
@@ -20,23 +54,22 @@ public class Enemy : PoolableObject
         base.OnDisable();
 
         agent.enabled = false;
+        OnDie = null;
     }
 
-    public virtual void SetupAgentFromConfiguration()
+    public void TakeDamage(int damage)
     {
-        agent.acceleration = enemyScriptableObject.acceleration;
-        agent.angularSpeed = enemyScriptableObject.angularSpeed;
-        agent.areaMask = enemyScriptableObject.areaMask;
-        agent.avoidancePriority = enemyScriptableObject.avoidancePriority;
-        agent.baseOffset = enemyScriptableObject.baseOffset;
-        agent.height = enemyScriptableObject.height;
-        agent.obstacleAvoidanceType = enemyScriptableObject.obstacleAvoidanceType;
-        agent.radius = enemyScriptableObject.radius;
-        agent.speed = enemyScriptableObject.speed;
-        agent.stoppingDistance = enemyScriptableObject.stoppingDistance;
+        health -= damage;
 
-        movement.updateRate = enemyScriptableObject.aiUpdateInterval;
+        if(health <= 0)
+        {
+            OnDie?.Invoke(this);
+            gameObject.SetActive(false);
+        }
+    }
 
-        health = enemyScriptableObject.health;
+    public Transform GetTransform()
+    {
+        return transform;
     }
 }

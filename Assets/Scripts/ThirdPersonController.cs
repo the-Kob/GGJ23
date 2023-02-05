@@ -12,9 +12,12 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
     [RequireComponent(typeof(PlayerInput))]
 #endif
-    public class ThirdPersonController : MonoBehaviour
+    public class ThirdPersonController : MonoBehaviour, IDamageable
     {
         [Header("Player")]
+        [Tooltip("Health of the character")]
+        public int Health = 300;
+
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
 
@@ -411,6 +414,21 @@ namespace StarterAssets
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
+        }
+
+        public void TakeDamage(int damage)
+        {
+            Health -= damage;
+
+            if(Health <= 0)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+
+        public Transform GetTransform()
+        {
+            return transform;
         }
     }
 }

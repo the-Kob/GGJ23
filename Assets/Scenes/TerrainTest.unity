@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -376,6 +376,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 262661829}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &551006623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544,
+    type: 3}
+  m_PrefabInstance: {fileID: 262661829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &551006624
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551006623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &551006632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551006623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46080c6a03f42645886c25babe33d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &581675343
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,10 +1010,11 @@ MonoBehaviour:
   player: {fileID: 262661831}
   numberOfEnemiesToSpawn: 5
   spawnDelay: 1
-  enemyPrefabs:
-  - {fileID: 3076293159900649879, guid: e8db5fb4e6636f9468f2a84774380dfb, type: 3}
-  - {fileID: 8885693355110967976, guid: da358add87e43804094eb2052c1b935d, type: 3}
-  enemySpawnMethod: 1
+  enemies:
+  - {fileID: 11400000, guid: 0699b3845f5f7b84eab5d5a68a8ae842, type: 2}
+  - {fileID: 11400000, guid: 8c5367352675b394f9ce0e1bc2b9cab6, type: 2}
+  - {fileID: 11400000, guid: c40d619dbfb2f474a9c26ca6e342a6b5, type: 2}
+  enemySpawnMethod: 0
 --- !u!4 &1215744702
 Transform:
   m_ObjectHideFlags: 0
