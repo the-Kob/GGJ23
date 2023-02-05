@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Super Jump
   cooldownTime: 5
   rootedAbility: 0
+  abilityUI: {fileID: 21300000, guid: 2fa159e9e758e9240a702f00259dce18, type: 3}
   duration: 10
   movSpeedMult: 1
   jumpBoostMult: 6

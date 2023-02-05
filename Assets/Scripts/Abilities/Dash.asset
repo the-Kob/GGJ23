@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Dash
   cooldownTime: 5
   rootedAbility: 0
+  abilityUI: {fileID: 21300000, guid: 219a934e25c2ea446a75abd5f96ccdd6, type: 3}
   duration: 0.1
   movSpeedMult: 30
   jumpBoostMult: 1

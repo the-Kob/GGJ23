@@ -10,6 +10,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/ProjectileMove.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Base/Ability.cs" />
+    </changedPaths>
+  </component>
   <component name="TaskManager">
     <servers />
   </component>

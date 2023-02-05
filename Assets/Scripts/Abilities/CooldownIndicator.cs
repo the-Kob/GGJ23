@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class CooldownIndicator : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class CooldownIndicator : MonoBehaviour
         cooldownForeground = (RectTransform)transform.Find("Cooldown foreground");
         cooldownText = transform.Find("Cooldown Text").GetComponent<TextMeshProUGUI>();
         transform.Find("Ability Key").GetComponent<TextMeshProUGUI>().text = abilitySlot.key.ToString().ToUpper();
+
+        cooldownBackground.gameObject.GetComponent<Image>().sprite = abilitySlot.currentAbility.abilityUI;
     }
 
     void Update() {
