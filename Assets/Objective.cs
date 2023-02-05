@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Objective : MonoBehaviour, IDamageable
 {
@@ -11,6 +12,10 @@ public class Objective : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damage)
     {
-        throw new System.NotImplementedException();
+        ObjectiveTakeDamage.Invoke(damage);
     }
+
+    public UnityEvent<int> ObjectiveTakeDamage = new UnityEvent<int>();
+
+
 }
