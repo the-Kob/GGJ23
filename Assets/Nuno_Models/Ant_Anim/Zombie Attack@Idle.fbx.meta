@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e1992cd2d8d16ba4a909dbbcab41a600
+guid: 7122a8b0b4b697f49b4e6bff19f43ca7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -33,18 +33,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: Idle
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 79
+      lastFrame: 300
       wrapMode: 0
       orientationOffsetY: 0
-      level: -1
+      level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -64,7 +64,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.25
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -104,10 +104,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 7122a8b0b4b697f49b4e6bff19f43ca7
-  - e66b160c28c1b424891835e48e04d7af
-  - 65da663092403834db9e28c5032f3867
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -120,7 +117,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.25
+    globalScale: 1
     rootMotionBoneName: mixamorig:LeftFoot
     hasTranslationDoF: 0
     hasExtraRoot: 0
