@@ -5048,6 +5048,16 @@ PrefabInstance:
       propertyPath: abilitySlot
       value: 
       objectReference: {fileID: 2106406593}
+    - target: {fileID: 6328174389615701945, guid: d784bdc5cdb8bbf45b4d19803c9b75ff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482153380005960321, guid: d784bdc5cdb8bbf45b4d19803c9b75ff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6482153380047980902, guid: d784bdc5cdb8bbf45b4d19803c9b75ff,
         type: 3}
       propertyPath: m_Name
@@ -5158,6 +5168,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6482153380557712144, guid: d784bdc5cdb8bbf45b4d19803c9b75ff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6482153380557712145, guid: d784bdc5cdb8bbf45b4d19803c9b75ff,
         type: 3}
       propertyPath: m_text
@@ -5175,6 +5190,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -366064476395090751, guid: 7238c0461d4b5d94e9678ded043c9e52,
         type: 2}
+    - target: {fileID: 6482153381066554874, guid: d784bdc5cdb8bbf45b4d19803c9b75ff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d784bdc5cdb8bbf45b4d19803c9b75ff, type: 3}
 --- !u!1001 &8345070700268369567
