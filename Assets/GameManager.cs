@@ -24,14 +24,8 @@ public class GameManager : MonoBehaviour
     public bool takeDamagetest = false;
     public int takeDamagetestAmount = 10;
 
-    public List<Transform> GetObjectiveTransforms()
-    {
-        List<Transform> list = new List<Transform>();
-
-        list.Add(objective.transform);
-
-        return list;
-    }
+    public RectTransform hpBack;
+    public RectTransform hpFront;
 
 
     void Start() {
@@ -49,6 +43,8 @@ public class GameManager : MonoBehaviour
 
     void TakeDamage(int damage) {
         health -= damage;
+
+        hpFront.sizeDelta = new Vector2((float)health/(float)startingHealth*hpBack.sizeDelta.x, hpBack.sizeDelta.y);
 
         if(health <= 0) {
             Time.timeScale = 0;
