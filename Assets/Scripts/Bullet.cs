@@ -25,7 +25,6 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(hitMask != (hitMask | (1 << other.gameObject.layer)))
             return;
-
         
         if(other.gameObject.GetComponent<Enemy>() != null) {
             other.gameObject.GetComponent<Enemy>().TakeDamage(damage);

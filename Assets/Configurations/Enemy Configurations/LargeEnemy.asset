@@ -15,7 +15,7 @@ MonoBehaviour:
   prefab: {fileID: 8885693355110967976, guid: da358add87e43804094eb2052c1b935d, type: 3}
   attackConfiguration: {fileID: 11400000, guid: 2f36b4efa8a617749a01ce90487968a3,
     type: 2}
-  health: 300
+  health: 100
   aiUpdateInterval: 0.1
   acceleration: 8
   angularSpeed: 120

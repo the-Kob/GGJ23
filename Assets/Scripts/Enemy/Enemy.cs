@@ -62,11 +62,13 @@ public class Enemy : PoolableObject, IDamageable
 
     public void TakeDamage(int damage)
     {
-        if(!tookDamageFlag)
+        /* if(!tookDamageFlag)
         {
             tookDamageFlag = true;
             movement.ChangeTarget(manager.player, manager.objective.transform, true);
-        }
+        } */
+
+        Debug.Log("damage" + damage);
 
         health -= damage;
 

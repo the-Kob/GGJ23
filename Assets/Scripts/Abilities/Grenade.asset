@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Grenade
   m_EditorClassIdentifier: 
   name: Grenade
-  cooldownTime: 1
+  cooldownTime: 5
   rootedAbility: 0
   abilityUI: {fileID: 21300000, guid: ec57d8490d88d924d924d4e21fa5c913, type: 3}
   bullet: {fileID: 4390799131772530201, guid: 351ebeb038aefe1419d1af4ede184255, type: 3}
@@ -21,5 +21,5 @@ MonoBehaviour:
   fireRate: 0
   maxBullets: 1
   bulletSpeed: 20
-  bulletDamage: 3
+  bulletDamage: 100
   sourceTransformName: mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand
