@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,18 @@ public class EnemyMovement : MonoBehaviour
         linkMover.OnLinkStart += HandleLinkStart;
     }
 
+    // For now we only care about objectives
+    public void ChangeTarget(Transform player, Transform objective, Boolean toPlayer)
+    {
+        if (toPlayer)
+        {
+            target = player;
+        } else
+        {
+            target = objective;
+        }
+    }
+
     private void HandleLinkStart()
     {
         animator.SetTrigger(jump);
@@ -40,6 +53,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void StartChasing()
     {
+        Debug.Log(agent.enabled);
         if(followCoroutine == null)
         {
             followCoroutine = StartCoroutine(FollowTarget());
@@ -61,6 +75,7 @@ public class EnemyMovement : MonoBehaviour
 
         while(enabled)
         {
+            Debug.Log(target);
             agent.SetDestination(target.transform.position);
 
             yield return wait;

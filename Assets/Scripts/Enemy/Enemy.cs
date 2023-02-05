@@ -7,7 +7,9 @@ public class Enemy : PoolableObject, IDamageable
 {
     private const string ATTACK_TRIGGER = "Attack";
     private Coroutine lookCoroutine;
+    private bool tookDamageFlag = false;
 
+    GameManager manager;
     public EnemyMovement movement;
     public NavMeshAgent agent;
     public int health = 100;
@@ -15,6 +17,7 @@ public class Enemy : PoolableObject, IDamageable
     public Animator animator;
     public delegate void DeathEvent(Enemy enemy);
     public DeathEvent OnDie;
+    
 
     private void Awake()
     {
@@ -59,6 +62,12 @@ public class Enemy : PoolableObject, IDamageable
 
     public void TakeDamage(int damage)
     {
+        if(!tookDamageFlag)
+        {
+            tookDamageFlag = true;
+            movement.ChangeTarget(manager.player, manager.objective, true);
+        }
+
         health -= damage;
 
         if(health <= 0)
