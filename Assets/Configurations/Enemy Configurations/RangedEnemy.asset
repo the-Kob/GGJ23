@@ -21,7 +21,7 @@ MonoBehaviour:
   angularSpeed: 120
   areaMask: -1
   avoidancePriority: 50
-  baseOffset: 0.75
+  baseOffset: 0
   height: 2
   obstacleAvoidanceType: 4
   radius: 0.5
