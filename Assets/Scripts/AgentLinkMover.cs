@@ -14,7 +14,7 @@ public enum OffMeshLinkMoveMethod
 public class AgentLinkMover : MonoBehaviour
 {
     public OffMeshLinkMoveMethod m_Method = OffMeshLinkMoveMethod.Parabola;
-    public AnimationCurve m_Curve = new AnimationCurve();9 .
+    public AnimationCurve m_Curve = new AnimationCurve();
     public delegate void LinkEvent();
     public LinkEvent OnLinkStart;
     public LinkEvent OnLinkEnd;
