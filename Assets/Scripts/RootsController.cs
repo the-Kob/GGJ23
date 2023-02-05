@@ -66,7 +66,8 @@ public class RootsController : MonoBehaviour
             _controller.MoveSpeed = 0;
             _controller.SprintSpeed = 0;
             //GetComponent<Rigidbody>().isKinematic = true;
-            _currentRoots = Instantiate(rootsPrefab, this.transform);
+            GameObject.Find("RootLeft").GetComponent<Animator>().Play("Root");
+            GameObject.Find("RootRight").GetComponent<Animator>().Play("Root");
 
             GameObject.Find("ArmAim").GetComponent<MultiAimConstraint>().weight = 1;
             GameObject.Find("PlayerFollowCamera").GetComponent<Cinemachine.CinemachineVirtualCamera>().m_Lens.FieldOfView = 35;
@@ -80,8 +81,9 @@ public class RootsController : MonoBehaviour
             _controller.MoveSpeed = 5;
             _controller.SprintSpeed = 5.335f;
             //GetComponent<Rigidbody>().isKinematic = true;
-            Destroy(_currentRoots);
-            _currentRoots = null;
+
+            GameObject.Find("RootLeft").GetComponent<Animator>().Play("Unroot");
+            GameObject.Find("RootRight").GetComponent<Animator>().Play("Unroot");
 
             GameObject.Find("ArmAim").GetComponent<MultiAimConstraint>().weight = 0.5f;
             GameObject.Find("PlayerFollowCamera").GetComponent<Cinemachine.CinemachineVirtualCamera>().m_Lens.FieldOfView = 40;
