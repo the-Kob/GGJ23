@@ -405,8 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b30bccd91ad0b84fbb57a7c7869218d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectives:
-  - {fileID: 1350554347}
+  objective: {fileID: 1350554351}
   player: {fileID: 262661831}
   health: 0
 --- !u!4 &466013969
@@ -1062,10 +1061,9 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 0699b3845f5f7b84eab5d5a68a8ae842, type: 2}
   - {fileID: 11400000, guid: 8c5367352675b394f9ce0e1bc2b9cab6, type: 2}
-  - {fileID: 11400000, guid: c40d619dbfb2f474a9c26ca6e342a6b5, type: 2}
   scaling: {fileID: 11400000, guid: d53aadd53ef52924d83291fb0ec16644, type: 2}
   enemySpawnMethod: 0
-  continuousSpawning: 0
+  continuousSpawning: 1
   round: 0
   scaledEnemies: []
 --- !u!4 &1215744702
@@ -1325,7 +1323,7 @@ GameObject:
   - component: {fileID: 1350554349}
   - component: {fileID: 1350554348}
   - component: {fileID: 1350554347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Objective
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1415,7 +1413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350554346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 500.15988, y: 2.7104387, z: 522.5752}
+  m_LocalPosition: {x: 500.15988, y: 0.46, z: 522.5752}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

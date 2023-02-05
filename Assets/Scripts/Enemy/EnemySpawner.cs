@@ -123,10 +123,10 @@ public class EnemySpawner : MonoBehaviour
             scaledEnemies[spawnIndex].SetupEnemy(enemy);
 
             NavMeshHit hit;
-            if (NavMesh.SamplePosition(spawnPosition, out hit, 2f, -1))
+            if (NavMesh.SamplePosition(spawnPosition, out hit, 2f, 1))
             {
                 enemy.agent.Warp(hit.position);
-                enemy.movement.ChangeTarget(gameManager.player, gameManager.GetObjectiveTransforms(), false);
+                enemy.movement.ChangeTarget(gameManager.player, gameManager.objective, false);
                 enemy.agent.enabled = true;
                 enemy.movement.StartChasing();
                 enemy.OnDie += HandleEnemyDeath;

@@ -30,25 +30,15 @@ public class EnemyMovement : MonoBehaviour
     }
 
     // For now we only care about objectives
-    public void ChangeTarget(Transform player, List<Transform> objectives, Boolean toPlayer)
+    public void ChangeTarget(Transform player, Transform objective, Boolean toPlayer)
     {
         if (toPlayer)
         {
             target = player;
-            return;
+        } else
+        {
+            target = objective;
         }
-
-        float distance = float.MaxValue;
-        Transform chosen = target;
-
-        foreach (Transform objective in objectives) {
-            if (Vector3.Distance(transform.position, objective.position) < distance)
-            {
-                chosen = objective;
-            }
-        }
-        
-        target = chosen;
     }
 
     private void HandleLinkStart()
@@ -63,6 +53,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void StartChasing()
     {
+        Debug.Log(agent.enabled);
         if(followCoroutine == null)
         {
             followCoroutine = StartCoroutine(FollowTarget());
@@ -84,6 +75,7 @@ public class EnemyMovement : MonoBehaviour
 
         while(enabled)
         {
+            Debug.Log(target);
             agent.SetDestination(target.transform.position);
 
             yield return wait;
